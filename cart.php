@@ -1,8 +1,6 @@
 <?php
-
-
-    require_once "Medicine.php";
-    require_once "Product.php";
+    require_once "med.php";
+    require_once "product.php";
 
 
     class Cart extends Medicine{
@@ -22,13 +20,14 @@
                 echo 
                 '
                 <ul>
+                
                     <li>Name: ' . $item->getName() . '</li>
                     <li>Description: ' . $item->getDescription() . '</li>
                     <li>Price: ₱ ' . number_format($item->getPrice(), 2 ). '</li>
                     <li>Dose: ' . $item->getDose() . '</li>
                     <li>Type: ' . $item->getType() . '</li>
                     <li>Exp Date: ' . $item->getExpirationDate() . '</li>
-                    <li>SRP: ' . $item->computeSRP() . '</li>
+                    <li>SRP: ' . $item->computeprice() . '</li>
                 </ul>
                 <hr>
                 <hr>';
@@ -43,7 +42,7 @@
 
             $total = 0;
             foreach($this->cartItems as $key => $item){
-                $total += $item->computeSRP();
+                $total += $item->computeprice();
             }
             
             

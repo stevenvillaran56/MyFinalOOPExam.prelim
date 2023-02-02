@@ -1,6 +1,6 @@
 <?php
-    require_once "Medicine.php";
-    require_once "Cart.php";
+    require_once "med.php";
+    require_once "cart.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +33,7 @@
 
         $cart = new Cart;
 
+        $cart->addToCart($medicine[0]);
         $cart->addToCart($medicine[0]);
         $cart->addToCart($medicine[1]);
         $cart->viewCart();

@@ -39,10 +39,10 @@
         }
 
 
-        function computeSRP() {
+        function computeprice() {
             return $this->price * 1.5;
         }
 
-
+        
     }
 ?>
