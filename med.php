@@ -1,8 +1,6 @@
 <?php
     require_once "product.php";
 
-
-
     class Medicine extends Product{
         private $dose;
         private $type;

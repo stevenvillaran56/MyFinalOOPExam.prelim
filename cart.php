@@ -10,7 +10,8 @@
         function addToCart($item){
             $this->cartItems[] = $item;
         }
-
+ 
+        
         function viewCart(){
 
             $arrCartItems = $this->cartItems;
